@@ -14,7 +14,7 @@ function getRandomInt(max) {
 function aiNextNumber() {
   // Decide whether to guess randomly or learn the correct sequence
   if (Math.random() < aiState.randomness) {
-    return getRandomInt(10); // Random guess between 1 and 10
+    return getRandomInt(100); // Random guess between 1 and 100
   } else {
     return expectedCount; // Learned behavior
   }
@@ -51,8 +51,8 @@ function startCounting() {
       statusMessage.textContent = `AI made a mistake! Guessed ${currentCount}, expected ${expectedCount}.`;
     }
 
-    // Reset if sequence ends
-    if (expectedCount > 10) {
+    // Reset if sequence ends (now goes to 100 instead of 10)
+    if (expectedCount > 100) {
       expectedCount = 1;
     }
 
