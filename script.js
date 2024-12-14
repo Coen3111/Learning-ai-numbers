@@ -57,7 +57,7 @@ function startCounting() {
     }
 
     updateUI();
-  }, 1000);
+  }, 50); // Adjusted interval to 50ms for faster counting
 
   document.getElementById("startButton").disabled = true; // Disable button after start
 }
